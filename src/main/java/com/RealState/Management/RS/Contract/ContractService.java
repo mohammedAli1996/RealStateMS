@@ -109,9 +109,9 @@ public class ContractService {
 			 }
 		 }
 		return contracts;
-	}
-	
-	
+	}         
+	   
+	      
 	public int saveCommContract(CommContract request) {
 		if(request.getPropertyId() != -1 ) {
 			if(!propertyService.rentProperty(request.getPropertyId(), request.getContractStartDate(), request.getContractEndDate(),true)) {
@@ -123,7 +123,7 @@ public class ContractService {
 			}
 		}
 		if(request.getContractEndDate().after(new Date())) {
-			request.setStatus("Rented");
+			request.setStatus("Rented");  
 		}else {
 			request.setStatus("Expired");
 		}

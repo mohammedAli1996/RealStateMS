@@ -99,7 +99,7 @@
               <span class="count"></span>
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
-              aria-labelledby="notificationDropdown">
+              aria-labelledby="notificationDropdown" id="notificationsPanel">
               <p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
               <a class="dropdown-item preview-item">
                 <div class="preview-thumbnail">
@@ -108,7 +108,7 @@
                   </div>
                 </div>
                 <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
-              aria-labelledby="notificationDropdown" id="notificationsPanel">
+              aria-labelledby="notificationDropdown" >
               
             </div>
             </div>
@@ -327,8 +327,8 @@
       </div>
       <!-- partial -->
       <!-- partial:../../partials/_sidebar.html -->
-        <!-- partial:../../partials/_sidebar.html -->
-       <nav class="sidebar sidebar-offcanvas" id="sidebar">
+      <!-- partial:../../partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
           <li class="nav-item">
             <a class="nav-link" href="/index">
@@ -415,7 +415,7 @@
           <div class="row">
             <div class="container">
               <ul class="nav nav-tabs">
-                <li  class="active"><a id="ownerD" data-toggle="tab" href="#OwnerD">Owner Details</a></li>
+                <li class="active"><a id="ownerD" data-toggle="tab" href="#OwnerD">Owner Details</a></li>
                 <li><a id="locationTab" data-toggle="tab" href="#Location">Location</a></li>
                 <li><a data-toggle="tab" href="#PropertyAndUnits">Property And Units</a></li>
                 <li id="attachA"><a data-toggle="tab" href="#Attachments">Attachments</a></li>
@@ -430,7 +430,7 @@
                       <div class="col-12">
                         <form class="forms-sample">
                           <div class="row regForm">
-                             <div class="form-group col-lg-4">
+                            <div class="form-group col-lg-4">
                               <label for="exampleInputUsername1">Owner Name</label>
                               <input type="text" class="form-control" id="companyName">
                             </div>
@@ -438,7 +438,7 @@
                               <label for="exampleInputUsername1">Passport Number</label>
                               <input type="text" class="form-control" id="licensesNumber">
                             </div>
-                         
+
                             <div class="form-group col-lg-4">
                               <label for="exampleInputUsername1">ID Number</label>
                               <input type="text" class="form-control" id="mobileNumber">
@@ -549,7 +549,7 @@
                         </form>
                       </div>
                     </div>
-                    
+
                   </div>
                   <hr>
                 </div>
@@ -566,13 +566,15 @@
                             <div class="form-group">
                               <label>File Name</label>
                               <div class="input-group col-lg-12">
-                                <input type="text" class="form-control" placeholder="File Name" onchange="setAttachmentsTypeActionName(this.value)" required>
+                                <input type="text" class="form-control" placeholder="File Name"
+                                  onchange="setAttachmentsTypeActionName(this.value)" required>
                               </div>
                             </div>
                             <div class="form-group">
                               <label>Date</label>
                               <div class="input-group col-lg-12">
-                                <input type="date" class="form-control" placeholder="File Name" onchange="setAttachmentsTypeActionDate(this.value)" required>
+                                <input type="date" class="form-control" placeholder="File Name"
+                                  onchange="setAttachmentsTypeActionDate(this.value)" required>
                               </div>
                             </div>
                             <div class="form-group">
@@ -646,7 +648,7 @@
   </div>
   <!-- container-scroller -->
   <!-- plugins:js -->
-  <input id="pId"  th:value="${pId}" hidden>
+  <input id="pId" th:value="${pId}" hidden>
   <script src="../../vendors/js/vendor.bundle.base.js"></script>
   <!-- endinject -->
   <!-- Plugin js for this page -->
