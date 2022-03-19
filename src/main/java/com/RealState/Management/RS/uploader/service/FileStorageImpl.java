@@ -98,18 +98,19 @@ public class FileStorageImpl implements FileStorage {
     private static int currentSeq  ; 
     
 //    @PostConstruct
-//    private void setSequence() {
-//    	if(filesSequenceRepository.findAll().size() == 0 ) {
-//    		FilesSequence seq = new FilesSequence();
-//    		seq.setSeq(1);
-//    		currentSeq = 1 ;
-//    		filesSequenceRepository.save(seq);
-//    	}else {
-//    		currentSeq = filesSequenceRepository.findAll().get(0).getSeq();
-//    	}
-//    }
+    private void setSequence() {
+    	if(filesSequenceRepository.findAll().size() == 0 ) {
+    		FilesSequence seq = new FilesSequence();
+    		seq.setSeq(1);
+    		currentSeq = 1 ;
+    		filesSequenceRepository.save(seq);
+    	}else {
+    		currentSeq = filesSequenceRepository.findAll().get(0).getSeq();
+    	}
+    }
     
     private int getSequence() {
+    	setSequence();
     		FilesSequence seq = filesSequenceRepository.findAll().get(0);
     		currentSeq ++; 
     		seq.setSeq(currentSeq);
