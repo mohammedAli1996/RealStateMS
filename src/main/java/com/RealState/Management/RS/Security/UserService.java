@@ -29,15 +29,7 @@ public class UserService {
 	private void initRolesList() {
 		currSystemRoles.add("manager");
 		currSystemRoles.add("sales");
-		if(userRepository.countByUsername("SupportAccount") == 0 ) {
-    		Usersys user = new Usersys();
-    		user.setUsername("SupportAccount");
-    		user.setPassword(new BCryptPasswordEncoder().encode("Support@Admin123"));
-    		user.addRole("owner");
-    		user.addPermission("owner");
-    		user.setRepoId(10);
-    		this.userRepository.save(user);
-    	}  
+		
 	}
 	
 	
