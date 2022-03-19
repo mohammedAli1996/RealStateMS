@@ -48,6 +48,7 @@ public class UploadFileController {
             model.addAttribute("message", "Files uploaded successfully!");
             model.addAttribute("files", fileNames); 
         } catch (Exception e) {
+        	e.printStackTrace();
             model.addAttribute("message", "Fail!");
             model.addAttribute("files", fileNames);
         }
