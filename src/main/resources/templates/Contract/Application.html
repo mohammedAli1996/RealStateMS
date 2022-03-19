@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title> Residential Contract Details</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="../../vendors/feather/feather.css">
+  <link rel="stylesheet" href="../../vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <link rel="stylesheet" href="../../vendors/select2/select2.min.css">
+  <link rel="stylesheet" href="../../vendors/select2-bootstrap-theme/select2-bootstrap.min.css">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="../../css/vertical-layout-light/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="../../images/favicon.png" />
+
+  <link rel="stylesheet" href="../../css/styleApp.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    .tab-a {
+      font-weight: bolder;
+    }
+
+    .content-header {
+      border: 1cm;
+      background-color: 	#6495ED;
+      padding: 1.5mm;
+    }
+
+    .content-header p {
+      font-weight: bold;
+      color: white;
+    }
+
+    .content-body {
+      border: 1cm;
+      background-color: white;
+      border-radius: 2mm;
+    }
+
+    .content-body p {
+      padding: 2mm;
+    }
+
+    .content-container {
+      border-style: solid;
+      border-width: 0.5mm;
+      border-color: blue;
+      border-radius: 1mm;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-scroller">
+    <!-- partial:../../partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo mr-5" href="../../index.html"><img src="../../images/logo.svg" class="mr-2"
+            alt="logo" /></a>
+        <a class="navbar-brand brand-logo-mini" href="../../index.html"><img src="../../images/logo-mini.svg"
+            alt="logo" /></a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+        <ul class="navbar-nav mr-lg-2">
+          <li class="nav-item nav-search d-none d-lg-block">
+            <div class="input-group">
+              <div class="input-group-prepend hover-cursor" id="navbar-search-icon">
+                <span class="input-group-text" id="search">
+                  <i class="icon-search"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control" id="navbar-search-input" placeholder="Search now"
+                aria-label="search" aria-describedby="search">
+            </div>
+          </li>
+        </ul>
+        <ul class="navbar-nav navbar-nav-right">
+          <li class="nav-item dropdown">
+            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#"
+              data-toggle="dropdown">
+              <i class="icon-bell mx-0"></i>
+              <span class="count"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
+              aria-labelledby="notificationDropdown">
+              <p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-success">
+                    <i class="ti-info-alt mx-0"></i>
+                  </div>
+                </div>
+                <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
+              aria-labelledby="notificationDropdown" id="notificationsPanel">
+              
+            </div>
+            </div>
+          </li>
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+              <img src="../../images/faces/face28.jpg" alt="profile" />
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item">
+                <i class="ti-settings text-primary"></i>
+                Settings
+              </a>
+              <a class="dropdown-item">
+                <i class="ti-power-off text-primary"></i>
+                Logout
+              </a>
+            </div>
+          </li>
+          <li class="nav-item nav-settings d-none d-lg-flex">
+            <a class="nav-link" href="#">
+              <i class="icon-ellipsis"></i>
+            </a>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+          data-toggle="offcanvas">
+          <span class="icon-menu"></span>
+        </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:../../partials/_settings-panel.html -->
+      <div class="theme-setting-wrapper">
+        <div id="settings-trigger"><i class="ti-settings"></i></div>
+        <div id="theme-settings" class="settings-panel">
+          <i class="settings-close ti-close"></i>
+          <p class="settings-heading">SIDEBAR SKINS</p>
+          <div class="sidebar-bg-options selected" id="sidebar-light-theme">
+            <div class="img-ss rounded-circle bg-light border mr-3"></div>Light
+          </div>
+          <div class="sidebar-bg-options" id="sidebar-dark-theme">
+            <div class="img-ss rounded-circle bg-dark border mr-3"></div>Dark
+          </div>
+          <p class="settings-heading mt-2">HEADER SKINS</p>
+          <div class="color-tiles mx-0 px-4">
+            <div class="tiles success"></div>
+            <div class="tiles warning"></div>
+            <div class="tiles danger"></div>
+            <div class="tiles info"></div>
+            <div class="tiles dark"></div>
+            <div class="tiles default"></div>
+          </div>
+        </div>
+      </div>
+      <div id="right-sidebar" class="settings-panel">
+        <i class="settings-close ti-close"></i>
+        <ul class="nav nav-tabs border-top" id="setting-panel" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="todo-tab" data-toggle="tab" href="#todo-section" role="tab"
+              aria-controls="todo-section" aria-expanded="true">TO DO LIST</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="chats-tab" data-toggle="tab" href="#chats-section" role="tab"
+              aria-controls="chats-section">CHATS</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="setting-content">
+          <div class="tab-pane fade show active scroll-wrapper" id="todo-section" role="tabpanel"
+            aria-labelledby="todo-section">
+            <div class="add-items d-flex px-3 mb-0">
+              <form class="form w-100">
+                <div class="form-group d-flex">
+                  <input type="text" class="form-control todo-list-input" placeholder="Add To-do">
+                  <button type="submit" class="add btn btn-primary todo-list-add-btn" id="add-task">Add</button>
+                </div>
+              </form>
+            </div>
+            <div class="list-wrapper px-3">
+              <ul class="d-flex flex-column-reverse todo-list">
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Team review meeting at 3.00 PM
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Prepare for presentation
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Resolve all the low priority tickets due today
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li class="completed">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox" checked>
+                      Schedule meeting for next week
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li class="completed">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox" checked>
+                      Project review
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+              </ul>
+            </div>
+            <h4 class="px-3 text-muted mt-5 font-weight-light mb-0">Events</h4>
+            <div class="events pt-4 px-3">
+              <div class="wrapper d-flex mb-2">
+                <i class="ti-control-record text-primary mr-2"></i>
+                <span>Feb 11 2018</span>
+              </div>
+              <p class="mb-0 font-weight-thin text-gray">Creating component page build a js</p>
+              <p class="text-gray mb-0">The total number of sessions</p>
+            </div>
+            <div class="events pt-4 px-3">
+              <div class="wrapper d-flex mb-2">
+                <i class="ti-control-record text-primary mr-2"></i>
+                <span>Feb 7 2018</span>
+              </div>
+              <p class="mb-0 font-weight-thin text-gray">Meeting with Alisa</p>
+              <p class="text-gray mb-0 ">Call Sarah Graves</p>
+            </div>
+          </div>
+          <!-- To do section tab ends -->
+          <div class="tab-pane fade" id="chats-section" role="tabpanel" aria-labelledby="chats-section">
+            <div class="d-flex align-items-center justify-content-between border-bottom">
+              <p class="settings-heading border-top-0 mb-3 pl-3 pt-0 border-bottom-0 pb-0">Friends</p>
+              <small class="settings-heading border-top-0 mb-3 pt-0 border-bottom-0 pb-0 pr-3 font-weight-normal">See
+                All</small>
+            </div>
+            <ul class="chat-list">
+              <li class="list active">
+                <div class="profile"><img src="../../images/faces/face1.jpg" alt="image"><span class="online"></span>
+                </div>
+                <div class="info">
+                  <p>Thomas Douglas</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">19 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="../../images/faces/face2.jpg" alt="image"><span class="offline"></span>
+                </div>
+                <div class="info">
+                  <div class="wrapper d-flex">
+                    <p>Catherine</p>
+                  </div>
+                  <p>Away</p>
+                </div>
+                <div class="badge badge-success badge-pill my-auto mx-2">4</div>
+                <small class="text-muted my-auto">23 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="../../images/faces/face3.jpg" alt="image"><span class="online"></span>
+                </div>
+                <div class="info">
+                  <p>Daniel Russell</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">14 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="../../images/faces/face4.jpg" alt="image"><span class="offline"></span>
+                </div>
+                <div class="info">
+                  <p>James Richardson</p>
+                  <p>Away</p>
+                </div>
+                <small class="text-muted my-auto">2 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="../../images/faces/face5.jpg" alt="image"><span class="online"></span>
+                </div>
+                <div class="info">
+                  <p>Madeline Kennedy</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">5 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="../../images/faces/face6.jpg" alt="image"><span class="online"></span>
+                </div>
+                <div class="info">
+                  <p>Sarah Graves</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">47 min</small>
+              </li>
+            </ul>
+          </div>
+          <!-- chat tab ends -->
+        </div>
+      </div>
+      <!-- partial -->
+      <!-- partial:../../partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:5500/template/pages/charts/chartjs.html">
+              <i class="icon-grid menu-icon"></i>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../Property/register.html">
+              <i class="ti ti-pencil-alt menu-icon"></i>
+              <span class="menu-title">Register Property</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="http://127.0.0.1:5500/template/pages/Contract/contract.html">
+              <i class="ti ti-layout-cta-btn-right menu-icon"></i>
+              <span class="menu-title">Residential  Contract</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:5500/template/pages/Contract/CommercialContract.html">
+              <i class="ti ti-layout-cta-left menu-icon"></i>
+              <span class="menu-title">Commercial Contract</span>
+            </a>
+          </li>
+        
+        
+          <li class="nav-item">
+            <a class="nav-link"href="http://127.0.0.1:5500/template/pages/Contract/active.html">
+              <i class="ti ti-face-smile menu-icon"></i>
+              <span class="menu-title">Active  Users</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:5500/template/pages/Contract/InActive.html">
+              <i class="ti ti-face-sad menu-icon"></i>
+              <span class="menu-title">InActive Users</span>
+            </a>
+          </li>
+    
+    
+        </ul>
+      </nav>
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="container">
+              <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#Application">Application</a></li>
+                <li><a data-toggle="tab" href="#Payment">Payment</a></li>
+                <li><a data-toggle="tab" href="#Contract">Contract</a></li>
+                <li><a data-toggle="tab" href="#TaskH">Task History</a></li>
+              </ul>
+
+              <div class="tab-content" style="background-color: white;">
+                <div id="Application" class="tab-pane fade in active">
+                  <div class="container">
+                    <ul class="nav nav-tabs">
+                      <li class="active"><a class="tab-a" data-toggle="tab" href="#propertyUnits">Property Units <br>
+                          <small>Contract Unit Information</small></a></li>
+                      <li><a class="tab-a" data-toggle="tab" href="#Tenant">Tenant <br> <small>Tenant
+                            Information</small></a></li>
+                      <li><a class="tab-a" data-toggle="tab" href="#ContractNested">Contract <br> <small>Contract
+                            Details</small></a></li>
+                      <li><a class="tab-a" data-toggle="tab" href="#Attachment">Attachment <br> <small>Upload Required
+                            Documents</small></a></li>
+                      <li><a class="tab-a" data-toggle="tab" href="#Summary">Summary <br> <small>Applocation
+                            Summary</small></a></li>
+                    </ul>
+
+                    <div class="tab-content">
+                      <div id="propertyUnits" class="tab-pane fade">
+                        <h3>Contract Unit Information</h3>
+                        <hr>
+                        <div class="container content-container">
+                          <div class="row content-header">
+                            <p>Owner Details</p>
+                          </div>
+                          <div class="row content-body">
+                            <div class="col-lg-12">
+                              <p>Owner FullName : <strong> Alemlak limited </strong></p>
+                            </div>
+                            <div class="col-lg-12">
+                              <p>Company Name En :<strong>Alfata Alemlak limited</strong></p>
+                            </div>
+                            <div class="col-sm-6">
+                              <p>License Number : <strong>156226</strong></p>
+                            </div>
+                            <div class="col-sm-6">
+                              <p>Titled Deed Or Certificate Number :<strong>T0102041188-T3-506</strong></p>
+                            </div>
+                            <div class="col-sm-6">
+                              <p>Mobile Number : <strong>0502688541</strong></p>
+                            </div>
+                            <div class="col-sm-6">
+                              <p><input type="checkbox" checked disabled> Is Multi-Owner (Joint Owned)</p>
+                            </div>
+
+                          </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="container content-container">
+                          <div class="row content-header">
+                            <p>Unit Details</p>
+                          </div>
+                          <div class="row content-body">
+                            <div class="col-lg-4">
+                              <p>City : <strong> Ajman </strong></p>
+                            </div>
+                            <div class="col-lg-4">
+                              <p>Sector : <strong> City Center Sector </strong></p>
+                            </div>
+                            <div class="col-lg-4">
+                              <p>District : <strong> Rashideya 3 </strong></p>
+                            </div>
+
+                            <div class="col-lg-4">
+                              <p>Plot No : <strong> 1188 </strong></p>
+                            </div>
+                            <div class="col-lg-4">
+                              <p>Property Type :<strong> Building </strong></p>
+                            </div>
+                            <div class="col-lg-4">
+                              <p>Building :<strong> Ajman one </strong></p>
+                            </div>
+
+
+                            <div class="col-lg-4">
+                              <p>Unit Type :<strong> Ajman </strong></p>
+                            </div>
+                            <div class="col-lg-4">
+                              <p>Lease Unit :<strong> 514 </strong></p>
+                            </div>
+                            <div class="col-lg-4">
+                              <p>Floor Level :<strong> 5 </strong></p>
+                            </div>
+
+
+                            <div class="col-lg-4">
+                              <p>Rooms :<strong> 1 </strong></p>
+                            </div>
+                            <div class="col-lg-4">
+                              <p>Sewerage :<strong> 3121141419 </strong></p>
+                            </div>
+                            <div class="col-lg-4">
+                              <p>Is Verified :<strong> NO </strong></p>
+                            </div>
+
+
+                          </div>
+                        </div>
+                      </div>
+                      <div id="Tenant" class="tab-pane fade">
+                        <h3>Tenant Information</h3>
+                        <hr>
+                        <div class="container">
+                          <div class="col-12">
+                            <h4>Individual</h4>
+                            <hr>
+                            <form class="forms-sample">
+                              <div class="row">
+                                <div class="form-group col-sm-3">
+                                  <label for="exampleInputUsername1">Name in English</label>
+                                  <input type="text" class="form-control" value="Srinivas Sudani" disabled>
+                                </div>
+                                <div class="form-group col-sm-3">
+                                  <label for="exampleInputUsername1">Name in Arabic</label>
+                                  <input type="text" class="form-control" value="سرينيفاس سوداني" disabled>
+                                </div>
+                                <div class="form-group col-sm-3">
+                                  <label for="exampleInputUsername1">Emirates ID</label>
+                                  <input type="text" class="form-control" value="784-1968-4106948-5" disabled>
+                                </div>
+                                <div class="form-group col-sm-3">
+                                  <label for="exampleInputUsername1">Passport Number</label>
+                                  <input type="text" class="form-control" value="RO722904" disabled>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="form-group col-sm-4">
+                                  <label for="exampleInputUsername1">Nationality </label>
+                                  <input type="text" class="form-control" disabled value="India">
+                                </div>
+                                <div class="form-group col-sm-4">
+                                  <label for="exampleInputUsername1">Mobile Number</label>
+                                  <input type="text" class="form-control" disabled value="0503504376">
+                                </div>
+                                <div class="form-group col-sm-4">
+                                  <label for="exampleInputEmail1">Email</label>
+                                  <input type="email" class="form-control" disabled value="sreenivas.sudani@gmail.com">
+                                </div>
+                              </div>
+
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                      <div id="ContractNested" class="tab-pane fade">
+                        <h3>Contract Details</h3>
+                        <hr>
+                        <div class="container">
+                          <div class="col-12">
+                            <form class="forms-sample">
+                              <div class="row">
+                                <div class="form-group col-sm-4">
+                                  <label for="exampleInputUsername1">You can fill Contract details for<br>
+                                    <strong>Residential Contract</strong></label>
+                                </div>
+                                <div class="form-group col-sm-4">
+                                  <label for="exampleInputUsername1"><strong>Total Rent Amount (Yearly)</strong></label>
+                                  <div class="input-group">
+                                    <div class="input-group-prepend">
+                                      <span class="input-group-text bg-primary text-white">AED</span>
+                                    </div>
+                                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)"
+                                      disabled value="26000.00">
+                                  </div>
+                                </div>
+                                <div class="form-group col-sm-4">
+                                  <label for="exampleInputUsername1"><strong>Security Deposit</strong></label>
+                                  <div class="input-group">
+                                    <div class="input-group-prepend">
+                                      <span class="input-group-text bg-primary text-white">AED</span>
+                                    </div>
+                                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)"
+                                      disabled value="3,000.00">
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="form-group col-sm-4">
+                                </div>
+                                <div class="form-group col-sm-4">
+                                  <label for="exampleInputUsername1"><strong>No Of Installments</strong></label>
+                                  <input type="text" class="form-control" value="2" disabled>
+                                </div>
+                                <div class="form-group col-sm-4">
+                                  <label for="exampleInputUsername1"><strong>With Parking</strong></label>
+                                  <input type="checkbox" class="form-control" checked disabled>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="form-group col-sm-4">
+                                  <label for="exampleInputUsername1"><strong>Contract Terms &
+                                      Conditions</strong></label>
+                                </div>
+                                <div class="form-group col-sm-4">
+                                  <label for="exampleInputUsername1"><strong>Terms & Conditions (En)</strong></label>
+                                  <textarea class="form-control" disabled> </textarea>
+                                </div>
+                                <div class="form-group col-sm-4">
+                                  <label for="exampleInputUsername1"><strong>Terms & Conditions (Ar)</strong></label>
+                                  <textarea class="form-control" disabled></textarea>
+                                </div>
+                              </div>
+
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                      <div id="Attachment" class="tab-pane fade">
+                        <h3>Attach Documents</h3>
+                        <hr>
+                        <div class="row">
+                          <div class="col-lg-12 grid-margin stretch-card">
+                            <div class="card">
+                              <div class="card-body">
+                                <h4 class="card-title">User Profile Attachment</h4>
+                                <div class="table-responsive">
+
+                                  <table class="table table-hover">
+                                    <thead>
+                                      <tr>
+                                        <th>Attachment Title</th>
+                                        <th>Expiry Date</th>
+                                        <th></th>
+                                        <th></th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td style="width: 65%;">License</td>
+                                        <td style="width: 25%;"> 12/22/2018 12:00:00 AM</td>
+                                        <td style="width: 5%;">
+                                          <button type="button" class="btn btn-outline-primary btn-icon-text">
+                                            <i class="ti-file btn-icon-prepend"></i>
+                                            View
+                                          </button>
+                                        </td>
+                                        <td style="width: 5%;">
+                                          <button type="button" class="btn btn-outline-primary btn-icon-text">
+                                            <i class="ti-arrow-down btn-icon-prepend"></i>
+                                            Download
+                                          </button>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <br><br>
+                        <div class="row">
+                          <div class="col-lg-12 grid-margin stretch-card">
+                            <div class="card">
+                              <div class="card-body">
+                                <h4 class="card-title">Service Attachment</h4>
+                                <div class="table-responsive">
+
+                                  <table class="table table-hover">
+                                    <thead>
+                                      <tr>
+                                        <th>Attachment Title</th>
+                                        <th>Expiry Date</th>
+                                        <th></th>
+                                        <th></th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td style="width: 65%;">Contract Form</td>
+                                        <td style="width: 25%;"></td>
+                                        <td style="width: 5%;">
+                                          <button type="button" class="btn btn-outline-primary btn-icon-text">
+                                            <i class="ti-file btn-icon-prepend"></i>
+                                            View
+                                          </button>
+                                        </td>
+                                        <td style="width: 5%;">
+                                          <button type="button" class="btn btn-outline-primary btn-icon-text">
+                                            <i class="ti-arrow-down btn-icon-prepend"></i>
+                                            Download
+                                          </button>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td style="width: 65%;">Tenant UAE ID</td>
+                                        <td style="width: 25%;">08-Feb-2022</td>
+                                        <td style="width: 5%;">
+                                          <button type="button" class="btn btn-outline-primary btn-icon-text">
+                                            <i class="ti-file btn-icon-prepend"></i>
+                                            View
+                                          </button>
+                                        </td>
+                                        <td style="width: 5%;">
+                                          <button type="button" class="btn btn-outline-primary btn-icon-text">
+                                            <i class="ti-arrow-down btn-icon-prepend"></i>
+                                            Download
+                                          </button>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div id="Summary" class="tab-pane fade">
+                        <h3>Summary</h3>
+                        <hr>
+                        <div class="container content-container">
+                          <div class="row content-header">
+                            <p>Application Detail</p>
+                          </div>
+                          <div class="row content-body">
+                            <div class="col-lg-6">
+                              <p><strong> Applicaton Number:</strong> 01-ELR-102-21-014555</p>
+                            </div>
+                            <div class="col-lg-6">
+                              <p><strong> Submitted On :</strong> 15-03-2021 12:04:03</p>
+                            </div>
+                            <div class="col-lg-6">
+                              <p><strong> Last Updated :</strong> 17-03-2021 12:40:25</p>
+                            </div>
+                            <div class="col-lg-6">
+                              <p><strong> Application Status :</strong> Approved</p>
+                            </div>
+                          </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="container content-container">
+                          <div class="row content-header">
+                            <p>Application Notes</p>
+                          </div>
+                          <div class="row content-body">
+                            <div class="col-lg-12">
+                              <p><strong> No Notes Found! </strong></p>
+                            </div>
+                          </div>
+                        </div>
+                        <br>
+                        <input type="checkbox" checked disabled><label><strong> &nbsp I Agree that all contract data
+                            entered is correct</strong></label>
+                        <br>
+                        <input type="checkbox" disabled><label><strong> &nbsp No Objection to share
+                            data</strong></label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="Payment" class="tab-pane fade">
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <p><strong>Request Number : 01-ELR-102-21-014555</strong></p>
+                    </div>
+                    <div class="col-sm-4">
+                      <p><strong>Owner Name :</strong>Alfata Alemlak limited</p>
+                    </div>
+                    <div class="col-sm-4">
+                      <p><strong>TenantName: </strong>Srinivas Sudan</p>
+                    </div>
+                    <div class="container content-container">
+                      <div class="row content-header" style="padding-left: 50px;">
+                        <p>Bill Details</p>
+                      </div>
+                      <div class="col-lg-12">
+                        <p></p>
+                      </div>
+                      <div class="row content-body">
+                        <div class="col-lg-12">
+                          <p><strong> TASDEEQ Fees</strong></p>
+                        </div>
+                        <div class="col-lg-12">
+                          <div class="card">
+                            <div class="card-body">
+                              <div class="table-responsive">
+
+                                <table class="table table-hover">
+                                  <thead>
+                                    <tr>
+                                      <th>Fees Category</th>
+                                      <th>Amount</th>
+                                      <th>Fees</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td style="width: 65%;">Attesting the Residential Contract</td>
+                                      <td style="width: 30%;">560.00</td>
+                                      <td style="width: 5%;">
+                                        560.00
+                                      </td>
+                                    </tr>
+                                    <tr style="background-color: cornflowerblue;">
+                                      <td style="width: 65%;"></td>
+                                      <td style="width: 30%;"></td>
+                                      <td style="width: 5%;">
+                                        560.00
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <br><br>
+                        <div class="col-lg-12">
+                          <p><strong> SEWERAGE Fees</strong></p>
+                        </div>
+                        <div class="col-lg-12">
+                          <div class="card">
+                            <div class="card-body">
+                              <div class="table-responsive">
+
+                                <table class="table table-hover">
+                                  <thead>
+                                    <tr>
+                                      <th>Fees Category</th>
+                                      <th>Amount</th>
+                                      <th>Fees</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td style="width: 65%;">Previous Service Charge - 4361713566</td>
+                                      <td style="width: 30%;">12.00</td>
+                                      <td style="width: 5%;">12.00</td>
+                                    </tr>
+                                    <tr>
+                                      <td style="width: 65%;">Current Service Charge - 4361713566</td>
+                                      <td style="width: 30%;">0.00</td>
+                                      <td style="width: 5%;">0.00</td>
+                                    </tr>
+                                    <tr style="background-color: cornflowerblue;">
+                                      <td style="width: 65%;"></td>
+                                      <td style="width: 30%;"></td>
+                                      <td style="width: 5%;">
+                                        12.00
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <hr>
+                        <div class="col-sm-3">
+                          <p><strong>Debit Note :</strong> 30136052</p>
+                          <p><strong>Receipt Number :</strong> 64421</p>
+                          <button type="button" class="btn btn-info btn-icon-text">Print Receipt
+                            <i class="ti-printer btn-icon-append"></i>
+                          </button>
+                          <p></p>
+                        </div>
+                        <div class="col-sm-3">
+                          <p></p>
+                          <p><strong>status :</strong> <mark class="bg-warning text-white"
+                              style="border-radius: 1mm;">Paid</mark></p>
+                        </div>
+                        <div class="col-sm-3">
+                          <p></p>
+                          <p><strong>Payment method :</strong> <mark class="bg-success text-white"
+                              style="border-radius: 1mm;">Online</mark></p>
+                        </div>
+                        <div class="col-sm-3" style="text-align: right;">
+                          <p></p>
+                          <p style="color: red;font-size: large;"><strong>AED 572.00</strong></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="Contract" class="tab-pane fade">
+                  <div class="col-lg-12" style="border-style: dotted; text-align: center;">
+                    <image style="width: 75%; height: 75%;" src="/template/images/auth/register-bg.jpg">
+                    </image>
+                  </div>
+                </div>
+                <div id="TaskH" class="tab-pane fade">
+                  <div class="container content-container">
+                    <div class="row content-header">
+                      <p>Task History</p>
+                    </div>
+                    <div class="row content-body">
+                      <div class="col-lg-12">
+                        <div class="card">
+                          <div class="card-body">
+                            <div class="table-responsive">
+
+                              <table class="table table-hover">
+                                <thead>
+                                  <tr>
+                                    <th>Action Name</th>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td style="width: 50%;">Payment Completed</td>
+                                    <td style="width: 25%;">08/04/2021 12:08:01 PM</td>
+                                    <td style="width: 25%;">Approved</td>
+                                  </tr>
+                                  <tr>
+                                    <td style="width: 50%;">Application Accepted</td>
+                                    <td style="width: 25%;">08/04/2021 08:54:46 AM</td>
+                                    <td style="width: 25%;">Pending for Payment</td>
+                                  </tr>
+                                  <tr>
+                                    <td style="width: 50%;">Application Submission</td>
+                                    <td style="width: 25%;">07/04/2021 11:53:34 PM</td>
+                                    <td style="width: 25%;">In progress</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-3">
+                    <button style="margin-top: 5mm;" class="btn btn-outline-danger btn-fw">
+                      <i class="ti-arrow-left btn-icon-prepend"></i>
+                      Prev</button>
+                  </div>
+                  <div class="col-sm-6">
+                  </div>
+                  <div class="col-sm-3" style="text-align: right;">
+                    <button style="margin-top: 5mm;" class="btn btn-outline-success btn-fw">
+                      Next <i class="ti-arrow-right btn-icon-prepend"></i></button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:../../partials/_footer.html -->
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2022. All rights
+              reserved.</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Made In UAE <i
+                class="ti-heart text-danger ml-1"></i></span>
+          </div>
+        </footer>
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+  <!-- plugins:js -->
+  <script src="../../vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src="../../vendors/typeahead.js/typeahead.bundle.min.js"></script>
+  <script src="../../vendors/select2/select2.min.js"></script>
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="../../js/off-canvas.js"></script>
+  <script src="../../js/hoverable-collapse.js"></script>
+  <script src="../../js/template.js"></script>
+  <script src="../../js/settings.js"></script>
+  <script src="../../js/todolist.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="../../js/file-upload.js"></script>
+  <script src="../../js/typeahead.js"></script>
+  <script src="../../js/select2.js"></script>
+  <script src="../../js/app/notifications.js"></script>
+  <!-- End custom js for this page-->
+</body>
+
+</html>

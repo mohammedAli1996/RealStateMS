@@ -1,0 +1,127 @@
+MySql root user pass : 
+root@Milano.com123!@#
+
+
+Code repos account : 
+MilanoCoding@gmail.com
+root@Milano.com123!@#
+
+
+aws : 
+6q+ZX${/%QdJcsD
+
+
+github account pass 
+MilanoRepository!@#123
+
+
+$ mvn clean package spring-boot:repackage
+$ java -jar target/spring-boot-ops.war
+
+
+
+java -jar Milano-0.0.1-SNAPSHOT.jar --spring.config.location=file:///G:\Mohammed\Code\Projects\DataManager\Milano\target\classes\application.properties
+
+
+java -jar testing-0.0.1-SNAPSHOT.jar --spring.config.location=file:///G:\Mohammed\Code\Projects\testing\target\classes\application.properties
+
+
+http://www.geosminagency.com/
+
+
+https://www.jotform.com/form-templates/wedding-information-form
+
+
+
+
+Reem : 
+1Te&J4Endh&^w
+
+
+hotel accommodations
+
+bridal party bios
+directions to your venue
+mobile friendliness
+
+
+ansys
+
+
+https://www.agi.com/products/stk
+
+
+https://app.gala.games/?r=6165fda93a5abe643f23aae6&register=1
+
+https://coinmarketcap.com/currencies/falcon-project/
+
+
+
+https://git.heroku.com/milanowebsite.git
+https://milanowebsite.herokuapp.com/
+
+
+milanoWeb@outlook.com
+1Te&J4Endh&^w
+
+
+https://goo.gl/maps/Z3H3K9Jp8gU9KS7z5
+
+mohammad@milanollc.com
+
+https://convertio.co/
+
+heroku new pass : 
+milanoWEB@123!@#
+
+
+
+digital ocean  : 
+scp -i key/id_rsa target.zip root@147.182.160.35:/artifact
+ssh -i key/id_rsa root@147.182.160.35
+Mohammed@Milano@29550050
+
+ssl password :
+qweASDzxc123!@#
+
+sudo kill -9 $(sudo lsof -t -i:9001)
+
+
+java -jar webSite.jar --spring.config.location=file:production.properties
+
+
+insta username : 
+
+milacoding8
+
+insta pass : 
+Milano@123!@#
+
+
+https://o7planning.org/12885/install-a-free-lets-encrypt-ssl-certificate-for-spring-boot
+
+
+https://www.digitalocean.com/community/questions/how-do-i-point-my-custom-domain-to-my-ip-port-41-111-20-36-8080
+https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-20-04
+
+
+https://www.digitalocean.com/community/tutorials/how-to-point-to-digitalocean-nameservers-from-common-domain-registrars
+
+
+ns1.digitalocean.com
+ns2.digitalocean.com
+ns3.digitalocean.com
+
+
+
+
+
+
+java -jar webSite.jar --server.port=443 -Dserver.ssl.key-store=file:/artifact/cert/milanollc_com.jks -Dserver.ssl.key-store-password=qweASDzxc123!@# -Dserver.ssl.key-alias=milanollc
+
+
+
+
+
+
+https://fitgirl-repacks.site/just-cause-3-xl-edition-v1-05-dlcs/
