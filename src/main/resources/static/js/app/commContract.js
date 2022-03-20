@@ -110,7 +110,7 @@ function searchProperty() {
                 if(data[i].status == "rented"){
                     document.getElementById("resultBody").innerHTML += "<tr><th>"+data[i].type+"</th><th>"+data[i].nameDesc+"</th>   <th>"+data[i].leaseUnit+"</th>  <th>"+data[i].area+"</th>  <th>"+data[i].rooms+"</th>  <th>"+data[i].parking+"</th>  <th>"+data[i].premisesNum+"</th> <th>" + data[i].status + "</th> </tr>"
                 }else {
-                    document.getElementById("resultBody").innerHTML += "<tr><th>"+data[i].type+"</th><th>"+data[i].nameDesc+"</th>   <th>"+data[i].leaseUnit+"</th>  <th>"+data[i].area+"</th>  <th>"+data[i].rooms+"</th>  <th>"+data[i].parking+"</th>  <th>"+data[i].premisesNum+"</th> <th>" + data[i].status + "</th> <th><button value="+data[i].id+" onclick='setUnitId(this.value)' >Select</button></th></tr>"
+                    document.getElementById("resultBody").innerHTML += "<tr><th>"+data[i].type+"</th><th>"+data[i].nameDesc+"</th>   <th>"+data[i].leaseUnit+"</th>  <th>"+data[i].area+"</th>  <th>"+data[i].rooms+"</th>  <th>"+data[i].parking+"</th>  <th>"+data[i].premisesNum+"</th> <th>" + data[i].status + "</th> <th><button value="+data[i].id+"  class='btn btn-outline-danger btn-fw'  onclick='setUnitId(this.value)' >Select</button></th></tr>"
                 }
                 
             }

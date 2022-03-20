@@ -56,16 +56,18 @@ public class PropertyController {
 	}
 	
 	@GetMapping("/property/delete/{id}")    
-	public ResponseEntity<?> deletePropertyById(@PathVariable int id ) {
+	public ModelAndView deletePropertyById(@PathVariable int id ) {
 		 AjaxResponseBody result = new AjaxResponseBody();
 		 try {
 			 propertyService.deletePropertyById(id);
 			 result.setMsg("success");
 			 result.setHolderID(id);
-			 return ResponseEntity.ok(result);
+			 ModelAndView mav = new ModelAndView("Contract/search");
+		     return mav ; 
+			
 		 }catch(Exception ex) {
-			 result.setMsg(ex.getMessage());
-			 return ResponseEntity.badRequest().body(result);
+			 ModelAndView mav = new ModelAndView("Contract/search");
+		     return mav ; 
 		 }
 		
 	  }
