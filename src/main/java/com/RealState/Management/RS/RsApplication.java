@@ -20,9 +20,9 @@ public class RsApplication implements CommandLineRunner{
           	  
 	       
 	@Override      
-    public void run(String... args) {    
+    public void run(String... args) {      
 //        fileStorage.deleteAll();    
 //        fileStorage.init();  
     }
 }   
-                                     
+                                        
