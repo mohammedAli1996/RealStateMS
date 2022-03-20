@@ -142,7 +142,7 @@ public class ContractController {
 	
 	@GetMapping("/index")
     public ModelAndView getIndex() {
-    	ModelAndView mav = new ModelAndView("index");
+    	ModelAndView mav = new ModelAndView("dashbaord");
     	return mav; 
     }
 	
