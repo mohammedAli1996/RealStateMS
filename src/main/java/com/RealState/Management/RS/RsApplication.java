@@ -12,17 +12,17 @@ import com.RealState.Management.RS.uploader.service.FileStorage;
 public class RsApplication implements CommandLineRunner{
 
 	 @Resource
-	 FileStorage fileStorage;                  
+	 FileStorage fileStorage;                   
 	 
-	public static void main(String[] args) {    
+	public static void main(String[] args) {      
 		SpringApplication.run(RsApplication.class, args);
-	}  
+	}        
           	  
 	       
 	@Override      
-    public void run(String... args) {      
+    public void run(String... args) {        
 //        fileStorage.deleteAll();    
 //        fileStorage.init();  
-    }
+    }         
 }   
-                                        
+                                              

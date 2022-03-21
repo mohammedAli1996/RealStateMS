@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 
 
 public interface FileStorage {
-    void store(MultipartFile file, int parentId , String date , String type , String fileName, String section) throws IOException;
+    void store(MultipartFile file, int parentId , String date , String type , String fileName, String section , String amount ) throws IOException;
 
     Resource loadFile(String filename);
 

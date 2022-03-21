@@ -56,6 +56,7 @@ function saveProperty() {
     request["rooms"] = document.getElementById("rooms").value;
     request["waterNum"] = document.getElementById("waterNum").value;
     request["sewerageNum"] = document.getElementById("sewerageNum").value;
+    request["empNumber"] = document.getElementById("empNumber").value;
     if (document.getElementById("premisesNum").checked) {
         request["premisesNum"] = true;
     } else {

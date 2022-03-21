@@ -37,6 +37,8 @@ function getPropertyData(){
             document.getElementById("rooms").value = data.rooms;
             document.getElementById("waterNum").value = data.waterNum;
             document.getElementById("sewerageNum").value = data.sewerageNum;
+            document.getElementById("empNumber").value = data.empNumber ; 
+
             if (data.premisesNum  ) {
                 document.getElementById("premisesNum").checked = true;
             } else {
@@ -99,6 +101,7 @@ function saveProperty() {
     request["rooms"] = document.getElementById("rooms").value;
     request["waterNum"] = document.getElementById("waterNum").value;
     request["sewerageNum"] = document.getElementById("sewerageNum").value;
+    request["empNumber"] = document.getElementById("empNumber").value;
     if (document.getElementById("premisesNum").checked) {
         request["premisesNum"] = true;
     } else {

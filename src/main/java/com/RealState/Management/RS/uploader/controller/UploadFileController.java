@@ -26,17 +26,17 @@ public class UploadFileController {
     
 
       
-    @PostMapping("/upload/{contractId}/{fileName}/{date}/{fileType}/{section}") 
+    @PostMapping("/upload/{contractId}/{fileName}/{date}/{fileType}/{section}/{amount}") 
     public String uploadMultipartFile(@RequestParam("files") MultipartFile[] files, Model model 
     		, @PathVariable int contractId , @PathVariable String fileName 
-    		, @PathVariable String date , @PathVariable String fileType , @PathVariable String section) {
+    		, @PathVariable String date , @PathVariable String fileType , @PathVariable String section, @PathVariable String amount) {
         List<String> fileNames = null;
         try {
             fileNames = Arrays.asList(files)  
                     .stream()     
                     .map(file -> { 
                         try { 
-							fileStorage.store(file,contractId,date,fileType,fileName,section);
+							fileStorage.store(file,contractId,date,fileType,fileName,section,amount);
 						} catch (IOException e) {
 
 							e.printStackTrace();

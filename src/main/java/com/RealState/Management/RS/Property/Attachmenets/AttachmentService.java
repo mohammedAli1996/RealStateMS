@@ -14,14 +14,15 @@ public class AttachmentService {
 	private AttachmentRepository attachmentRepository ; 
 	
 	
-	public Attachment saveAttachment(String fileName , String path , int contractId , String type , String date, String section) {
+	public Attachment saveAttachment(String fileName , String path , int contractId , String type , String date, String section , String amount) {
 		Attachment attachment = new Attachment()
 				.setDate(date)
 				.setName(fileName)
 				.setPath(path)
 				.setContractId(contractId)
 				.setType(type)
-				.setSection(section);
+				.setSection(section)
+				.setAmount(amount);
 		return attachmentRepository.save(attachment);
 	}
 	  

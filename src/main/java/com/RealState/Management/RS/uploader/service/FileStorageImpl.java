@@ -20,7 +20,6 @@ import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.util.stream.Stream;
 
-import javax.annotation.PostConstruct;
 
 
 @Service
@@ -43,7 +42,7 @@ public class FileStorageImpl implements FileStorage {
     
     
     @Override
-    public void store(MultipartFile file,int parentId , String date , String type , String fileName ,String section ) throws IOException {
+    public void store(MultipartFile file,int parentId , String date , String type , String fileName ,String section , String amount) throws IOException {
     	int id = getSequence();
         try {
             Files.copy(file.getInputStream(), this.rootLocation.resolve(id+"_"+file.getOriginalFilename()), StandardCopyOption.REPLACE_EXISTING);
@@ -51,7 +50,7 @@ public class FileStorageImpl implements FileStorage {
             throw new RuntimeException("FAIL! -> message = " + e.getMessage());
         } 
         String path = id+"_"+file.getOriginalFilename() ; 
-        attachmentService.saveAttachment(fileName,path , parentId, type, date,section);
+        attachmentService.saveAttachment(fileName,path , parentId, type, date,section , amount);
     }
 
     @Override

@@ -41,7 +41,12 @@ async function submitForm(formId , conId , attType , tableId){
             var table = document.getElementById(tableId);
             table.innerHTML = "";
             for(var i = 0 ; i < data.length ; i ++ ){
-                table.innerHTML += "<tr><td style='width: 50%;'>"+data[i].name+"</td><td style='width: 25%;'>"+data[i].date+"</td><td style='width: 5%;'><a href='/files/"+data[i].path+"' target='_blank' class='btn btn-outline-primary btn-icon-text'><i class='ti-file btn-icon-prepend'></i>View</a></td></tr>";
+                if(attType == "serviceCharges" || attType == "Maintainance"){
+                    table.innerHTML += "<tr><td style='width: 50%;'>"+data[i].name+"</td><td style='width: 25%;'>"+data[i].date+"</td><td style='width: 25%;'>"+data[i].amount+"</td><td style='width: 5%;'><a href='/files/"+data[i].path+"' target='_blank' class='btn btn-outline-primary btn-icon-text'><i class='ti-file btn-icon-prepend'></i>View</a></td></tr>";
+                }else{
+                    table.innerHTML += "<tr><td style='width: 50%;'>"+data[i].name+"</td><td style='width: 25%;'>"+data[i].date+"</td><td style='width: 5%;'><a href='/files/"+data[i].path+"' target='_blank' class='btn btn-outline-primary btn-icon-text'><i class='ti-file btn-icon-prepend'></i>View</a></td></tr>";
+                }
+                
             }
         },
         error: function (e) {
@@ -147,7 +152,8 @@ function setUnitId(id){
     document.getElementById("sewegNumber").value = element.sewerageNum;
     document.getElementById("hasPremises").checked  = element.premisesNum;
     document.getElementById("parking").checked  = element.parking;
-
+    document.getElementById("empNumber").value  = element.empNumber;
+    
 
 }
 
@@ -156,7 +162,7 @@ function setUnitId(id){
 
 
 
-var actionName = "", actionDate = "";
+var actionName = "", actionDate = "" , amntttt = "";
 
 function setActionName(name) {
     actionName = name;
@@ -167,13 +173,18 @@ function setActionDate(date) {
     setFormAction();
 }
 
+function setAmount(amt){
+    amntttt = amt ; 
+    setFormAction();
+}
+
 function setFormAction() {
-    document.getElementById("fileUploadForm").action = "/upload/" + contractId + "/" + actionName + "/" + actionDate + "/serviceCharges/comm";
+    document.getElementById("fileUploadForm").action = "/upload/" + contractId + "/" + actionName + "/" + actionDate + "/serviceCharges/comm/"+amntttt;
 }
 
 //
 
-var maintainanceActionName = "", maintainanceActionDate = "";
+var maintainanceActionName = "", maintainanceActionDate = "" , maintainanceActionAmount = "";
 
 function setMaintainanceActionName(name) {
     maintainanceActionName = name;
@@ -184,8 +195,14 @@ function setMaintainanceActionDate(date) {
     setMaintainanceFormAction();
 }
 
+function setMaintainanceActionAmount(amount){
+    maintainanceActionAmount = amount ; 
+    setMaintainanceFormAction();
+}
+
+
 function setMaintainanceFormAction() {
-    document.getElementById("maintainanceFileUploadForm").action = "/upload/" + contractId + "/" + maintainanceActionName + "/" + maintainanceActionDate + "/Maintainance/comm";
+    document.getElementById("maintainanceFileUploadForm").action = "/upload/" + contractId + "/" + maintainanceActionName + "/" + maintainanceActionDate + "/Maintainance/comm/"+maintainanceActionAmount;
 }
 
 
@@ -202,7 +219,7 @@ function setAttachmentsTypeActionDate(date) {
     setAttachmentsTypeFormAction();
 }
 function setAttachmentsTypeFormAction() {
-    document.getElementById("attachmentsTypeFileUploadForm").action = "/upload/" + contractId + "/" + attachmentsTypeActionName + "/" + attachmentsTypeActionDate + "/AttachmentsType/comm";
+    document.getElementById("attachmentsTypeFileUploadForm").action = "/upload/" + contractId + "/" + attachmentsTypeActionName + "/" + attachmentsTypeActionDate + "/AttachmentsType/comm/0";
 }
 
 
@@ -220,7 +237,11 @@ function getAttachments(attType , conId , tableId){
             var table = document.getElementById(tableId);
             table.innerHTML = "";
             for(var i = 0 ; i < data.length ; i ++ ){
-                table += "<tr><td style='width: 50%;'>"+data[i].name+"</td><td style='width: 25%;'>"+data[i].date+"</td><td style='width: 5%;'><a href='"+data[i].path+"' targer='_blank' class='btn btn-outline-primary btn-icon-text'><i class='ti-file btn-icon-prepend'></i>View</a></td></tr>";
+                if(attType == "serviceCharges" || attType == "Maintainance"){
+                    table.innerHTML += "<tr><td style='width: 50%;'>"+data[i].name+"</td><td style='width: 25%;'>"+data[i].date+"</td><td style='width: 25%;'>"+data[i].amount+"</td><td style='width: 5%;'><a href='/files/"+data[i].path+"' target='_blank' class='btn btn-outline-primary btn-icon-text'><i class='ti-file btn-icon-prepend'></i>View</a></td></tr>";
+                }else{
+                    table.innerHTML += "<tr><td style='width: 50%;'>"+data[i].name+"</td><td style='width: 25%;'>"+data[i].date+"</td><td style='width: 5%;'><a href='/files/"+data[i].path+"' target='_blank' class='btn btn-outline-primary btn-icon-text'><i class='ti-file btn-icon-prepend'></i>View</a></td></tr>";
+                }
             }
         },
         error: function (e) {

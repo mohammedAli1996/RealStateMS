@@ -47,6 +47,8 @@ public class Property {
 	private String waterNum ; 
 	 
 	private String sewerageNum ; 
+	
+	private String empNumber ; 
 	  
 	private boolean parking ; 
 	

@@ -31,6 +31,8 @@ public class Attachment {
 	
 	private String section ; 
 	
+	private String amount ; 
+	
 	private int contractId ; 
 	
 }
