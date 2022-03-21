@@ -154,7 +154,7 @@ function setAttachmentsTypeActionDate(date) {
     setAttachmentsTypeFormAction();
 }
 function setAttachmentsTypeFormAction() {
-    document.getElementById("attachmentsTypeFileUploadForm").action = "/upload/" + propertyId + "/" + attachmentsTypeActionName + "/" + attachmentsTypeActionDate + "/PropertyAttachment/prop";
+    document.getElementById("attachmentsTypeFileUploadForm").action = "/upload/" + propertyId + "/" + attachmentsTypeActionName + "/" + attachmentsTypeActionDate + "/PropertyAttachment/prop/0";
 }
 
 
